@@ -1,6 +1,11 @@
+@font-face{
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+    font-family: "OpenSans Regular";
+}
+
 body {
     background-color: #F6F2F2;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'OpenSans Regular', sans-serif;
 }
 
 header {
@@ -14,18 +19,17 @@ nav {
     background-color: #000000;
 }
 
-nav ul {
-    display: block;
+.nav-list {
+    display: flex;
     height: 100%;
     width: 70%;
     margin: auto;
     padding: 0;
+    list-style-type: none;
 }
 
 nav li {
-    display: inline-block;
-    height: 100%;
-    width: 24%;
+    flex: 1;
 }
 
 nav a {
