@@ -3,23 +3,37 @@
     font-family: "OpenSans Regular";
 }
 
+@font-face{
+    src: url('../fonts/Open_Sans/OpenSans-Italic.ttf');
+    font-family: "OpenSans Italic";
+}
+
+@font-face{
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf');
+    font-family: "OpenSans Bold";
+}
+
+
+
 body {
     background-color: #F6F2F2;
     font-family: 'OpenSans Regular', sans-serif;
 }
 
+/* HEADER */
+
 header {
     margin: 0 50px;
 }
 
-nav {
+header nav {
     /* width: 1249px; */
     height: 89px;
     opacity: 0.8;
     background-color: #000000;
 }
 
-.nav-list {
+header nav .nav-list {
     display: flex;
     height: 100%;
     width: 70%;
@@ -28,11 +42,11 @@ nav {
     list-style-type: none;
 }
 
-nav li {
+header nav li {
     flex: 1;
 }
 
-nav a {
+header nav a {
     color: #E0E0E0;
     font-style: normal;
     font-weight: bold;
@@ -48,55 +62,275 @@ nav a {
     top: 35%;
 }
 
-nav li:hover {
+header nav li:hover {
     background-color: #FF3F40;  
 }
 
+/* MAIN-CONTENT */
+
 .main-content {
+    display: flex;
     margin: 10px 50px;
+    gap: 30px;
+    align-items: center;
 }
 
-.left-column {
-    width: 50%;
-    display: inline-block;
-    float: left;
+.main-content .left-column {
+    flex: 5;
 }
 
-.left-column h1 {
+.main-content .left-column h1 {
     font-weight: 800;
-    font-size: 30px;
     line-height: 40px;
     text-transform: uppercase;
 }
 
-.left-column > p {
+.main-content .left-column > p {
     text-align: justify;
 }
 
-.left-column > div {
-    width: fit-content;
-    padding: 1px;
+.main-content .left-column > div {
+    width: 120px;
+    height: 44px;
     background-color: #FF2D2D;
     color: #E0E0E0;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
 }
 
-.left-column > div > p {
+.main-content .left-column > div > a {
     text-transform: capitalize;
-    margin: 10px 90px;
-}
-
-.left-column > div > p > a {
+    width: 100%;
+    height: auto;
     color: #E0E0E0;
     text-decoration: none;
 }
 
-.right-column {
-    width: 45%;
-    display: inline-block;
-    float: right;
+.main-content .right-column {
+    flex: 4;
 }
 
-.right-column img {
+.main-content .right-column img {
     width: 100%;
     height: auto;
+}
+
+/* MAIN-CONTENT-2 */
+
+.main-content-2 {
+    display: flex;
+    margin: 10px 50px;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-content-2 .left-column {
+    flex: 4;
+    min-width: 200px;
+}
+
+.main-content-2 .left-column > h1 {
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.main-content-2 .left-column > p {
+    text-align: justify;
+}
+
+.main-content-2 .left-column > div {
+    width: 120px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.0001);
+    border: 2px solid #FF0000;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.main-content-2 .left-column > div > a {
+    text-transform: capitalize;
+    width: 100%;
+    height: auto;
+    color: #FF2D2D;
+    text-decoration: none;
+}
+
+.main-content-2 .right-column {
+    flex: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-content-2 .right-column > div {
+    max-width: calc(50% - 10px);
+    min-width: 200px;
+}
+
+.main-content-2 .right-column > div > h3 {
+    margin-bottom: 5px;
+}
+
+.main-content-2 .right-column > div > p {
+    margin-top: 5px;
+}
+
+/* SEPARATORS */
+
+.separator {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    color: #ECECEC;
+    background-color: #ECECEC;
+    height: 1px;
+    border: none;
+}
+
+/* MAIN-CONTENT-3 */
+
+.main-content-3 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 50px;
+    /* gap: 30px; */
+    align-items: center;
+}
+
+.main-content-3 h1 {
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.main-content-3 p {
+    width: 50%;
+    text-align: center;
+}
+
+.main-content-3 hr {
+    width: 15%;
+    background-color: #FF2D2D;
+    color: #FF2D2D;
+    height: 2px;
+    border: none;
+}
+
+.main-content-3 .products-titles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.main-content-3 .products-titles > h5 {
+    text-transform: uppercase;
+    flex: 1;
+    text-align: center;
+}
+
+.main-content-3 .products-squares {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-content-3 .products-squares > div {
+    background-color: #5281FF;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.main-content-3 .products-squares > div:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+/* MAIN-CONTENT-4 */
+
+.main-content-4 {
+    margin: 10px 50px;
+}
+
+.main-content-4 > h1 {
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.main-content-4 > p {
+    max-width: 400px;
+}
+
+.main-content-4 > hr {
+    width: 15%;
+    background-color: #FF2D2D;
+    color: #FF2D2D;
+    height: 2px;
+    border: none;
+    margin: 20px 0;
+}
+
+.main-content-4 h3 {
+    text-transform: uppercase;
+}
+
+.main-content-4 .big-photo {
+    min-width: 260px;
+    background-color: #FF3F40;
+}
+
+.main-content-4 .big-photo:after {
+    content: "";
+    display: block;
+    padding-bottom: 133.33%;
+}
+
+.main-content-4 .photo-container {
+    display: flex;
+    gap: 40px;
+}
+
+.main-content-4 .social-links {
+    display: flex;
+    max-width: 380px;
+    min-width: 280px;
+    justify-content: space-around;
+}
+
+.main-content-4 .social-links > p {
+    font-style: italic;
+}
+
+.main-content-4 .smaller-photos-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.main-content-4 .smaller-photos-container > div {
+    background-color: #FF3F40;
+    flex: 1;
+}
+
+.main-content-4 .smaller-photos-container > div:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.main-content-4 .left-column {
+    align-self: flex-end;
 }
